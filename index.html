@@ -13,29 +13,38 @@
     <title>Civic OS — Report. Connect. Resolve.</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
-    <!-- =========================
+
+    <!-- =====================================
          TOP NAVIGATION
-    ========================== -->
+    ====================================== -->
 
     <header class="topbar">
 
-        <a href="index.html" class="brand">
+        <div class="brand">
 
             <div class="brand-logo">
                 C
             </div>
 
             <div class="brand-text">
-                <strong>Civic OS</strong>
-                <span>Digital Civic Intelligence</span>
+
+                <strong>
+                    Civic OS
+                </strong>
+
+                <span>
+                    Digital Civic Intelligence
+                </span>
+
             </div>
 
-        </a>
+        </div>
 
 
         <div class="network-status">
@@ -50,298 +59,674 @@
 
 
 
-    <!-- =========================
-         MAIN CONTENT
-    ========================== -->
+    <!-- =====================================
+         MAIN APP
+    ====================================== -->
 
-    <main>
+    <main id="app">
 
 
-        <!-- HERO -->
+        <!-- HOME SCREEN -->
 
-        <section class="hero">
+        <section
+            id="homeScreen"
+            class="screen active"
+        >
 
-            <div class="hero-content">
+            <div class="hero">
 
-                <div class="eyebrow">
-                    AI + DIGITAL GOVERNANCE
+                <div class="hero-content">
+
+                    <span class="eyebrow">
+                        AI + DIGITAL GOVERNANCE
+                    </span>
+
+                    <h1>
+                        Make your city heard.
+                    </h1>
+
+                    <p>
+                        Civic OS connects citizens,
+                        communities and governance
+                        through AI-powered civic intelligence.
+                    </p>
+
+
+                    <div class="hero-motto">
+
+                        <span>
+                            Report.
+                        </span>
+
+                        <span>
+                            Connect.
+                        </span>
+
+                        <span>
+                            Resolve.
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-actions">
+
+                        <button
+                            class="btn btn-primary"
+                            onclick="showScreen('reportScreen')"
+                        >
+                            📢 Report a Problem
+                        </button>
+
+
+                        <button
+                            class="btn btn-secondary"
+                            onclick="showScreen('issuesScreen')"
+                        >
+                            🗺️ Explore Issues
+                        </button>
+
+                    </div>
+
                 </div>
 
 
-                <h1>
-                    Make your city heard.
-                </h1>
+                <div class="hero-visual">
 
+                    <div class="orbit orbit-one"></div>
 
-                <p class="hero-description">
+                    <div class="orbit orbit-two"></div>
 
-                    Civic OS connects citizens, communities
-                    and governance through AI-powered civic
-                    intelligence.
+                    <div class="civic-core">
 
-                </p>
+                        <div class="core-icon">
+                            C
+                        </div>
 
+                        <span>
+                            CIVIC
+                        </span>
 
-                <div class="hero-motto">
+                        <small>
+                            CONNECTED
+                        </small>
 
-                    <span>Report.</span>
-                    <span>Connect.</span>
-                    <span>Resolve.</span>
-
-                </div>
-
-
-                <div class="hero-actions">
-
-                    <a
-                        href="pages/report.html"
-                        class="btn btn-primary"
-                    >
-                        📢 Report a Problem
-                    </a>
-
-
-                    <a
-                        href="pages/issues.html"
-                        class="btn btn-secondary"
-                    >
-                        🗺️ Explore Issues
-                    </a>
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <div class="hero-visual">
+            <!-- QUICK ACTIONS -->
 
-                <div class="orbit orbit-one"></div>
+            <section class="section">
 
-                <div class="orbit orbit-two"></div>
-
-                <div class="civic-core">
-
-                    <div class="core-icon">
-                        C
-                    </div>
-
-                    <span>
-                        CIVIC
-                    </span>
-
-                    <small>
-                        CONNECTED
-                    </small>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- QUICK ACTIONS -->
-
-        <section class="section">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="section-label">
-                        CIVIC ACTION
-                    </span>
-
-                    <h2>
-                        Everything in one place.
-                    </h2>
-
-                </div>
-
-            </div>
-
-
-            <div class="action-grid">
-
-
-                <a
-                    href="pages/report.html"
-                    class="action-card"
-                >
-
-                    <div class="card-icon">
-                        📢
-                    </div>
-
-                    <h3>
-                        Report a Problem
-                    </h3>
-
-                    <p>
-                        Tell your community about a
-                        civic issue that needs attention.
-                    </p>
-
-                    <span class="card-link">
-                        Create report →
-                    </span>
-
-                </a>
-
-
-
-                <a
-                    href="pages/issues.html"
-                    class="action-card"
-                >
-
-                    <div class="card-icon">
-                        🗺️
-                    </div>
-
-                    <h3>
-                        Explore Issues
-                    </h3>
-
-                    <p>
-                        Discover reported civic problems
-                        around your community.
-                    </p>
-
-                    <span class="card-link">
-                        Explore issues →
-                    </span>
-
-                </a>
-
-
-
-                <a
-                    href="pages/community.html"
-                    class="action-card"
-                >
-
-                    <div class="card-icon">
-                        🤝
-                    </div>
-
-                    <h3>
-                        Civic Community
-                    </h3>
-
-                    <p>
-                        Connect people and skills with
-                        problems that need help.
-                    </p>
-
-                    <span class="card-link">
-                        Join community →
-                    </span>
-
-                </a>
-
-
-
-                <a
-                    href="pages/dashboard.html"
-                    class="action-card"
-                >
-
-                    <div class="card-icon">
-                        📊
-                    </div>
-
-                    <h3>
-                        Governance Dashboard
-                    </h3>
-
-                    <p>
-                        Understand civic activity through
-                        data and intelligent insights.
-                    </p>
-
-                    <span class="card-link">
-                        Open dashboard →
-                    </span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- CIVIC PULSE -->
-
-        <section class="section">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="section-label">
-                        CIVIC PULSE
-                    </span>
-
-                    <h2>
-                        Community at a glance.
-                    </h2>
-
-                </div>
-
-                <span class="live-label">
-                    ● LIVE
+                <span class="section-label">
+                    CIVIC ACTION
                 </span>
 
+                <h2>
+                    Everything in one place.
+                </h2>
+
+
+                <div class="action-grid">
+
+
+                    <button
+                        class="action-card"
+                        onclick="showScreen('reportScreen')"
+                    >
+
+                        <div class="card-icon">
+                            📢
+                        </div>
+
+                        <h3>
+                            Report a Problem
+                        </h3>
+
+                        <p>
+                            Report a civic issue
+                            that needs attention.
+                        </p>
+
+                        <span class="card-link">
+                            Create report →
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="action-card"
+                        onclick="showScreen('issuesScreen')"
+                    >
+
+                        <div class="card-icon">
+                            🗺️
+                        </div>
+
+                        <h3>
+                            Explore Issues
+                        </h3>
+
+                        <p>
+                            Discover reported civic
+                            problems in your community.
+                        </p>
+
+                        <span class="card-link">
+                            Explore issues →
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="action-card"
+                        onclick="showScreen('communityScreen')"
+                    >
+
+                        <div class="card-icon">
+                            🤝
+                        </div>
+
+                        <h3>
+                            Civic Community
+                        </h3>
+
+                        <p>
+                            Connect people and skills
+                            with civic problems.
+                        </p>
+
+                        <span class="card-link">
+                            Join community →
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="action-card"
+                        onclick="showScreen('dashboardScreen')"
+                    >
+
+                        <div class="card-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            Governance Dashboard
+                        </h3>
+
+                        <p>
+                            Understand civic activity
+                            through intelligent data.
+                        </p>
+
+                        <span class="card-link">
+                            Open dashboard →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- CIVIC PULSE -->
+
+            <section class="section">
+
+                <span class="section-label">
+                    CIVIC PULSE
+                </span>
+
+                <h2>
+                    Community at a glance.
+                </h2>
+
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            📢
+                        </span>
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <p>
+                            Issues Reported
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            ✓
+                        </span>
+
+                        <strong>
+                            84
+                        </strong>
+
+                        <p>
+                            Issues Resolved
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            ⚙️
+                        </span>
+
+                        <strong>
+                            31
+                        </strong>
+
+                        <p>
+                            In Progress
+                        </p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <span>
+                            ⏳
+                        </span>
+
+                        <strong>
+                            13
+                        </strong>
+
+                        <p>
+                            Awaiting Action
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =====================================
+             REPORT SCREEN
+        ====================================== -->
+
+        <section
+            id="reportScreen"
+            class="screen"
+        >
+
+            <div class="page-header">
+
+                <span class="eyebrow">
+                    CIVIC REPORTING
+                </span>
+
+                <h1>
+                    Report a Problem
+                </h1>
+
+                <p>
+                    Tell Civic OS about a civic issue
+                    and let AI help analyze it.
+                </p>
+
             </div>
 
 
-            <div class="stats-grid">
+            <div class="report-card">
+
+                <h2>
+                    What is the problem?
+                </h2>
+
+                <div class="category-grid">
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Roads')"
+                    >
+                        🛣️ Roads
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Garbage')"
+                    >
+                        🗑️ Garbage
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Streetlights')"
+                    >
+                        💡 Streetlights
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Water')"
+                    >
+                        💧 Water
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Health')"
+                    >
+                        🏥 Public Health
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Education')"
+                    >
+                        🎓 Education
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Environment')"
+                    >
+                        🌱 Environment
+                    </button>
+
+
+                    <button
+                        class="category-option"
+                        onclick="selectCategory(this, 'Other')"
+                    >
+                        ••• Other
+                    </button>
+
+
+                </div>
+
+
+                <h2>
+                    Describe the issue
+                </h2>
+
+                <textarea
+                    id="issueDescription"
+                    placeholder="Example: There is a large pothole near the school entrance..."
+                ></textarea>
+
+
+                <h2>
+                    Location
+                </h2>
+
+                <input
+                    type="text"
+                    id="issueLocation"
+                    placeholder="Enter location or landmark"
+                >
+
+
+                <button
+                    class="btn btn-primary full-button"
+                    onclick="analyzeIssue()"
+                >
+                    ✦ Analyze with AI
+                </button>
+
+
+                <div
+                    id="analysisResult"
+                    class="analysis-result"
+                >
+
+                    <h2>
+                        ✦ AI Analysis
+                    </h2>
+
+                    <div id="resultContent"></div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ISSUES SCREEN
+        ====================================== -->
+
+        <section
+            id="issuesScreen"
+            class="screen"
+        >
+
+            <div class="page-header">
+
+                <span class="eyebrow">
+                    CIVIC ISSUES
+                </span>
+
+                <h1>
+                    Explore Issues
+                </h1>
+
+                <p>
+                    See what your community is reporting.
+                </p>
+
+            </div>
+
+
+            <div class="issue-list">
+
+
+                <div class="issue-card">
+
+                    <div>
+
+                        <h3>
+                            🛣️ Large pothole near school
+                        </h3>
+
+                        <p>
+                            Infrastructure · 12 min ago
+                        </p>
+
+                    </div>
+
+                    <span class="priority high">
+                        HIGH
+                    </span>
+
+                </div>
+
+
+                <div class="issue-card">
+
+                    <div>
+
+                        <h3>
+                            🗑️ Garbage collection delayed
+                        </h3>
+
+                        <p>
+                            Sanitation · 34 min ago
+                        </p>
+
+                    </div>
+
+                    <span class="priority medium">
+                        MEDIUM
+                    </span>
+
+                </div>
+
+
+                <div class="issue-card">
+
+                    <div>
+
+                        <h3>
+                            💡 Streetlight repaired
+                        </h3>
+
+                        <p>
+                            Public Lighting · 1 hr ago
+                        </p>
+
+                    </div>
+
+                    <span class="priority resolved">
+                        RESOLVED
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             COMMUNITY SCREEN
+        ====================================== -->
+
+        <section
+            id="communityScreen"
+            class="screen"
+        >
+
+            <div class="page-header">
+
+                <span class="eyebrow">
+                    CIVIC COMMUNITY
+                </span>
+
+                <h1>
+                    Connect & Collaborate
+                </h1>
+
+                <p>
+                    Communities can connect people,
+                    skills and civic problems.
+                </p>
+
+            </div>
+
+
+            <div class="coming-card">
+
+                🤝
+
+                <h2>
+                    Civic Collaboration
+                </h2>
+
+                <p>
+                    This space will connect citizens,
+                    volunteers and local skills with
+                    problems that need help.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             DASHBOARD SCREEN
+        ====================================== -->
+
+        <section
+            id="dashboardScreen"
+            class="screen"
+        >
+
+            <div class="page-header">
+
+                <span class="eyebrow">
+                    GOVERNANCE INTELLIGENCE
+                </span>
+
+                <h1>
+                    Civic Dashboard
+                </h1>
+
+                <p>
+                    A central view of civic activity,
+                    issues and resolution progress.
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-grid">
 
 
                 <div class="stat-card">
-
-                    <span class="stat-icon">
-                        📢
-                    </span>
 
                     <strong>
                         128
                     </strong>
 
                     <p>
-                        Issues Reported
+                        Total Reports
                     </p>
 
                 </div>
 
 
-
                 <div class="stat-card">
-
-                    <span class="stat-icon">
-                        ✓
-                    </span>
 
                     <strong>
                         84
                     </strong>
 
                     <p>
-                        Issues Resolved
+                        Resolved
                     </p>
 
                 </div>
 
 
-
                 <div class="stat-card">
-
-                    <span class="stat-icon">
-                        ⚙️
-                    </span>
 
                     <strong>
                         31
@@ -354,12 +739,7 @@
                 </div>
 
 
-
                 <div class="stat-card">
-
-                    <span class="stat-icon">
-                        ⏳
-                    </span>
 
                     <strong>
                         13
@@ -371,250 +751,57 @@
 
                 </div>
 
-            </div>
-
-        </section>
-
-
-
-        <!-- RECENT ISSUES -->
-
-        <section class="section">
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="section-label">
-                        RECENT ACTIVITY
-                    </span>
-
-                    <h2>
-                        Civic issues.
-                    </h2>
-
-                </div>
-
-                <a
-                    href="pages/issues.html"
-                    class="view-all"
-                >
-                    View all →
-                </a>
-
-            </div>
-
-
-            <div class="issue-list">
-
-
-                <div class="issue-card">
-
-                    <div class="issue-left">
-
-                        <div class="issue-icon road">
-                            🛣️
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Large pothole near school
-                            </h3>
-
-                            <p>
-                                Infrastructure · 12 min ago
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <span class="priority high">
-                        HIGH
-                    </span>
-
-                </div>
-
-
-
-                <div class="issue-card">
-
-                    <div class="issue-left">
-
-                        <div class="issue-icon garbage">
-                            🗑️
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Garbage collection delayed
-                            </h3>
-
-                            <p>
-                                Sanitation · 34 min ago
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <span class="priority medium">
-                        MEDIUM
-                    </span>
-
-                </div>
-
-
-
-                <div class="issue-card">
-
-                    <div class="issue-left">
-
-                        <div class="issue-icon light">
-                            💡
-                        </div>
-
-                        <div>
-
-                            <h3>
-                                Streetlight repaired
-                            </h3>
-
-                            <p>
-                                Public Lighting · 1 hr ago
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <span class="priority resolved">
-                        RESOLVED
-                    </span>
-
-                </div>
 
             </div>
 
         </section>
 
-
-
-        <!-- VISION -->
-
-        <section class="vision-section">
-
-            <div class="vision-content">
-
-                <span class="section-label">
-                    THE CIVIS OS VISION
-                </span>
-
-                <h2>
-                    From civic problems
-                    to civic solutions.
-                </h2>
-
-                <p>
-
-                    Civis OS uses artificial intelligence
-                    to understand civic problems, connect
-                    the right people and help communities
-                    move from reporting to resolution.
-
-                </p>
-
-            </div>
-
-
-            <div class="vision-flow">
-
-                <div>
-                    <span>01</span>
-                    <strong>Report</strong>
-                </div>
-
-                <div class="flow-line"></div>
-
-                <div>
-                    <span>02</span>
-                    <strong>Analyze</strong>
-                </div>
-
-                <div class="flow-line"></div>
-
-                <div>
-                    <span>03</span>
-                    <strong>Connect</strong>
-                </div>
-
-                <div class="flow-line"></div>
-
-                <div>
-                    <span>04</span>
-                    <strong>Resolve</strong>
-                </div>
-
-            </div>
-
-        </section>
 
     </main>
 
 
 
-    <!-- =========================
+    <!-- =====================================
          BOTTOM NAVIGATION
-    ========================== -->
+    ====================================== -->
 
     <nav class="bottom-nav">
 
-        <a
-            href="index.html"
-            class="nav-item active"
+
+        <button
+            onclick="showScreen('homeScreen')"
         >
-
-            <span>⌂</span>
-            Home
-
-        </a>
+            ⌂
+            <small>Home</small>
+        </button>
 
 
-        <a
-            href="pages/report.html"
-            class="nav-item"
+        <button
+            onclick="showScreen('reportScreen')"
         >
-
-            <span>＋</span>
-            Report
-
-        </a>
+            ＋
+            <small>Report</small>
+        </button>
 
 
-        <a
-            href="pages/issues.html"
-            class="nav-item"
+        <button
+            onclick="showScreen('issuesScreen')"
         >
-
-            <span>◉</span>
-            Issues
-
-        </a>
+            ◉
+            <small>Issues</small>
+        </button>
 
 
-        <a
-            href="pages/dashboard.html"
-            class="nav-item"
+        <button
+            onclick="showScreen('dashboardScreen')"
         >
+            ▦
+            <small>Dashboard</small>
+        </button>
 
-            <span>▦</span>
-            Dashboard
-
-        </a>
 
     </nav>
+
 
 
     <script src="script.js"></script>
