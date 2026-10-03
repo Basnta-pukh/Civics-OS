@@ -1,5 +1,5 @@
 /* =========================================
-   CIVICS OS — GLOBAL JAVASCRIPT
+   CIVIC OS — GLOBAL JAVASCRIPT
    ========================================= */
 
 
@@ -9,7 +9,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Civics OS initialized.");
+    console.log("Civic OS initialized.");
 
     updateNetworkStatus();
 
@@ -91,11 +91,11 @@ function scrollToTop() {
 
 
 /* =========================================
-   CIVIS OS CONSOLE MESSAGE
+   CIVIC OS CONSOLE MESSAGE
    ========================================= */
 
 console.log(
-    "%c CIVIS OS ",
+    "%c CIVIC OS ",
     "font-size:22px;font-weight:bold;"
 );
 
