@@ -1,5 +1,5 @@
 /* =========================================
-   CIVIS OS — GLOBAL JAVASCRIPT
+   CIVICS OS — GLOBAL JAVASCRIPT
    ========================================= */
 
 
@@ -9,7 +9,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Civis OS initialized.");
+    console.log("Civics OS initialized.");
 
     updateNetworkStatus();
 
