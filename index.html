@@ -1,1 +1,452 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Civis OS — Digital Civic Intelligence</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7f8;
+    color: #17211b;
+}
+/* ---------- TOP BAR ---------- */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #e5e9e6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+.logo-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: #123c2a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+.status {
+    font-size: 12px;
+    color: #087f5b;
+    background: #e7f5ef;
+    padding: 7px 11px;
+    border-radius: 20px;
+}
+/* ---------- MAIN ---------- */
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 100px;
+}
+/* ---------- HERO ---------- */
+.hero {
+    background: linear-gradient(135deg, #123c2a, #176044);
+    color: white;
+    border-radius: 28px;
+    padding: 38px 28px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(18,60,42,0.18);
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 35px solid rgba(255,255,255,0.06);
+    right: -70px;
+    top: -70px;
+}
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.7;
+    margin-bottom: 12px;
+}
+.hero h1 {
+    font-size: clamp(38px, 9vw, 70px);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    max-width: 700px;
+}
+.hero p {
+    margin-top: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.78);
+}
+/* ---------- ACTIONS ---------- */
+.actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+.action-btn {
+    border: none;
+    border-radius: 18px;
+    padding: 18px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.action-btn:hover {
+    transform: translateY(-2px);
+}
+.primary {
+    background: white;
+    color: #123c2a;
+}
+.secondary {
+    background: rgba(255,255,255,0.12);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+.action-icon {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 8px;
+}
+/* ---------- SECTION ---------- */
+.section {
+    margin-top: 34px;
+}
+.section-header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.section-header h2 {
+    font-size: 22px;
+    letter-spacing: -0.5px;
+}
+.section-header span {
+    font-size: 13px;
+    color: #7a857e;
+}
+/* ---------- STATS ---------- */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+.stat-card {
+    background: white;
+    border: 1px solid #e8ece9;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+}
+.stat-number {
+    font-size: 30px;
+    font-weight: 800;
+}
+.stat-label {
+    margin-top: 5px;
+    color: #7a857e;
+    font-size: 13px;
+}
+/* ---------- CIVIC ISSUES ---------- */
+.issue-list {
+    display: grid;
+    gap: 12px;
+}
+.issue-card {
+    background: white;
+    border: 1px solid #e8ece9;
+    border-radius: 20px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.issue-info h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.issue-info p {
+    font-size: 12px;
+    color: #7a857e;
+}
+.badge {
+    font-size: 11px;
+    font-weight: 700;
+    padding: 7px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+.high {
+    background: #ffe8e8;
+    color: #b42318;
+}
+.medium {
+    background: #fff4d6;
+    color: #8a5a00;
+}
+.resolved {
+    background: #e5f6ee;
+    color: #087f5b;
+}
+/* ---------- VISION ---------- */
+.vision {
+    background: #e9f2ef;
+    border-radius: 24px;
+    padding: 25px;
+}
+.vision h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+.vision p {
+    color: #536159;
+    line-height: 1.6;
+    font-size: 14px;
+}
+/* ---------- BOTTOM NAV ---------- */
+.bottom-nav {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 28px);
+    max-width: 500px;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(18px);
+    border: 1px solid #e1e7e3;
+    border-radius: 22px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.nav-item {
+    border: none;
+    background: transparent;
+    padding: 10px 4px;
+    border-radius: 16px;
+    color: #7a857e;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.nav-item.active {
+    background: #e7f5ef;
+    color: #087f5b;
+}
+.nav-icon {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+/* ---------- DESKTOP ---------- */
+@media (min-width: 700px) {
+    .actions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .hero {
+        padding: 55px;
+    }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+    <div class="logo">
+        <div class="logo-mark">C</div>
+        <span>Civis OS</span>
+    </div>
+    <div class="status">
+        ● Civic Network
+    </div>
+</header>
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="eyebrow">
+            AI + DIGITAL GOVERNANCE
+        </div>
+        <h1>
+            Make your city heard.
+        </h1>
+        <p>
+            Civis OS connects citizens, communities and governance
+            through AI-powered civic intelligence.
+        </p>
+        <div class="actions">
+            <button class="action-btn primary"
+                    onclick="reportProblem()">
+                <span class="action-icon">📢</span>
+                Report a Problem
+            </button>
+            <button class="action-btn secondary"
+                    onclick="exploreIssues()">
+                <span class="action-icon">🗺️</span>
+                Explore Issues
+            </button>
+            <button class="action-btn secondary"
+                    onclick="community()">
+                <span class="action-icon">🤝</span>
+                Join Community
+            </button>
+            <button class="action-btn secondary"
+                    onclick="dashboard()">
+                <span class="action-icon">📊</span>
+                Civic Dashboard
+            </button>
+        </div>
+    </section>
+    <!-- CIVIC PULSE -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Civic Pulse</h2>
+            <span>Live overview</span>
+        </div>
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">128</div>
+                <div class="stat-label">Issues Reported</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">84</div>
+                <div class="stat-label">Resolved</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">31</div>
+                <div class="stat-label">In Progress</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">13</div>
+                <div class="stat-label">Awaiting Action</div>
+            </div>
+        </div>
+    </section>
+    <!-- RECENT ISSUES -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Recent Civic Issues</h2>
+            <span>Today</span>
+        </div>
+        <div class="issue-list">
+            <div class="issue-card">
+                <div class="issue-info">
+                    <h3>Large pothole near school</h3>
+                    <p>Infrastructure • 12 min ago</p>
+                </div>
+                <span class="badge high">
+                    HIGH
+                </span>
+            </div>
+            <div class="issue-card">
+                <div class="issue-info">
+                    <h3>Garbage collection delayed</h3>
+                    <p>Sanitation • 34 min ago</p>
+                </div>
+                <span class="badge medium">
+                    MEDIUM
+                </span>
+            </div>
+            <div class="issue-card">
+                <div class="issue-info">
+                    <h3>Streetlight repaired</h3>
+                    <p>Public Lighting • 1 hr ago</p>
+                </div>
+                <span class="badge resolved">
+                    RESOLVED
+                </span>
+            </div>
+        </div>
+    </section>
+    <!-- VISION -->
+    <section class="section">
+        <div class="vision">
+            <h2>One platform. Better civic action.</h2>
+            <p>
+                Civis OS uses artificial intelligence to understand
+                civic problems, help prioritize them and connect
+                the right people with the right problems.
+            </p>
+        </div>
+    </section>
+</main>
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+    <button class="nav-item active" onclick="goHome()">
+        <span class="nav-icon">⌂</span>
+        Home
+    </button>
+    <button class="nav-item" onclick="reportProblem()">
+        <span class="nav-icon">＋</span>
+        Report
+    </button>
+    <button class="nav-item" onclick="exploreIssues()">
+        <span class="nav-icon">◉</span>
+        Issues
+    </button>
+    <button class="nav-item" onclick="dashboard()">
+        <span class="nav-icon">▦</span>
+        Dashboard
+    </button>
+</nav>
+<script>
+/* ---------- NAVIGATION PLACEHOLDERS ---------- */
+function goHome() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+function reportProblem() {
+    alert(
+        "Civis OS Report System\n\nComing next: AI-powered civic problem reporting."
+    );
+}
+function exploreIssues() {
+    alert(
+        "Civis OS Issue Explorer\n\nComing next: map-based civic issue discovery."
+    );
+}
+function community() {
+    alert(
+        "Civis OS Community\n\nComing next: civic collaboration and skill matching."
+    );
+}
+function dashboard() {
+    alert(
+        "Civis OS Governance Dashboard\n\nComing next: AI-powered governance analytics."
+    );
+}
+</script>
+</body>
+</html>
