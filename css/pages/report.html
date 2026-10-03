@@ -1,1 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Report a Problem — Civic OS</title>
+
+    <!-- Main Civic OS CSS -->
+    <link rel="stylesheet" href="../style.css">
+
+    <!-- Report Page CSS -->
+    <link rel="stylesheet" href="../css/report.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================================
+         TOP BAR
+    ================================= -->
+
+    <header class="topbar">
+
+        <a href="../index.html" class="brand">
+
+            <div class="brand-mark">
+                C
+            </div>
+
+            <div>
+                <strong>Civic OS</strong>
+                <span>Digital Governance</span>
+            </div>
+
+        </a>
+
+
+        <div class="network-status">
+
+            <span class="status-dot"></span>
+
+            Civic Network
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main class="page-container">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="page-header">
+
+            <span class="eyebrow">
+                CIVIC REPORTING
+            </span>
+
+            <h1>
+                Report a Problem
+            </h1>
+
+            <p>
+                Help your community by reporting a civic issue.
+                Civic OS will analyze your report and help route
+                it to the right department.
+            </p>
+
+        </section>
+
+
+
+        <!-- ================================
+             REPORT FORM
+        ================================= -->
+
+        <section class="report-card">
+
+
+            <!-- STEP 01 -->
+
+            <div class="section-heading">
+
+                <span class="step-number">
+                    01
+                </span>
+
+                <div>
+
+                    <h2>
+                        What is the problem?
+                    </h2>
+
+                    <p>
+                        Select the category that best describes the issue.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CATEGORY OPTIONS -->
+
+            <div class="category-grid">
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>🛣️</span>
+
+                    <strong>
+                        Roads
+                    </strong>
+
+                    <small>
+                        Potholes & roads
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>🗑️</span>
+
+                    <strong>
+                        Garbage
+                    </strong>
+
+                    <small>
+                        Waste collection
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>💡</span>
+
+                    <strong>
+                        Streetlights
+                    </strong>
+
+                    <small>
+                        Lighting problems
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>💧</span>
+
+                    <strong>
+                        Water
+                    </strong>
+
+                    <small>
+                        Water supply
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>🏥</span>
+
+                    <strong>
+                        Public Health
+                    </strong>
+
+                    <small>
+                        Health facilities
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>🎓</span>
+
+                    <strong>
+                        Education
+                    </strong>
+
+                    <small>
+                        Schools & learning
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>🌱</span>
+
+                    <strong>
+                        Environment
+                    </strong>
+
+                    <small>
+                        Environmental issues
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="category-option"
+                >
+
+                    <span>•••</span>
+
+                    <strong>
+                        Other
+                    </strong>
+
+                    <small>
+                        Something else
+                    </small>
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- ================================
+                 STEP 02 — DESCRIPTION
+            ================================= -->
+
+            <div class="form-section">
+
+
+                <div class="section-heading">
+
+                    <span class="step-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Describe the issue
+                        </h2>
+
+                        <p>
+                            Give us enough information to understand the problem.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <textarea
+                    id="issueDescription"
+                    rows="6"
+                    placeholder="Example: There is a large pothole near the school entrance..."
+                ></textarea>
+
+
+            </div>
+
+
+
+            <!-- ================================
+                 STEP 03 — LOCATION
+            ================================= -->
+
+            <div class="form-section">
+
+
+                <div class="section-heading">
+
+                    <span class="step-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Where is it?
+                        </h2>
+
+                        <p>
+                            Tell us where the problem is located.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="location-input">
+
+                    <span>
+                        📍
+                    </span>
+
+                    <input
+                        type="text"
+                        id="issueLocation"
+                        placeholder="Enter location or landmark"
+                    >
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================================
+                 STEP 04 — PHOTO
+            ================================= -->
+
+            <div class="form-section">
+
+
+                <div class="section-heading">
+
+                    <span class="step-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Add a photo
+                        </h2>
+
+                        <p>
+                            A photo can help Civic OS understand the issue.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <label class="upload-box">
+
+                    <input
+                        type="file"
+                        id="issuePhoto"
+                        accept="image/*"
+                    >
+
+                    <span class="upload-icon">
+                        📷
+                    </span>
+
+                    <strong>
+                        Upload a photo
+                    </strong>
+
+                    <small>
+                        JPG, PNG or other image formats
+                    </small>
+
+                </label>
+
+
+            </div>
+
+
+
+            <!-- ================================
+                 AI ANALYSIS INFORMATION
+            ================================= -->
+
+            <div class="ai-analysis-box">
+
+                <div class="ai-icon">
+                    ✦
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        AI Civic Analysis
+                    </h3>
+
+                    <p>
+                        Civic OS will analyze your report,
+                        identify its category and priority,
+                        and suggest the appropriate department.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ANALYZE BUTTON -->
+
+            <button
+                type="button"
+                class="primary-button"
+                onclick="analyzeIssue()"
+            >
+
+                ✦ Analyze with AI
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- ================================
+             AI RESULT
+        ================================= -->
+
+        <section
+            id="analysisResult"
+            class="analysis-result"
+            style="display: none;"
+        >
+
+
+            <div class="result-header">
+
+                <span class="result-icon">
+                    ✓
+                </span>
+
+
+                <div>
+
+                    <span class="eyebrow">
+                        CIVIC AI
+                    </span>
+
+                    <h2>
+                        Analysis Complete
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RESULT INFORMATION -->
+
+            <div class="result-grid">
+
+
+                <div class="result-item">
+
+                    <span>
+                        Category
+                    </span>
+
+                    <strong id="resultCategory">
+                        Road Infrastructure
+                    </strong>
+
+                </div>
+
+
+
+                <div class="result-item">
+
+                    <span>
+                        Priority
+                    </span>
+
+                    <strong id="resultPriority">
+                        High
+                    </strong>
+
+                </div>
+
+
+
+                <div class="result-item">
+
+                    <span>
+                        Confidence
+                    </span>
+
+                    <strong id="resultConfidence">
+                        94%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="result-item">
+
+                    <span>
+                        Suggested Department
+                    </span>
+
+                    <strong id="resultDepartment">
+                        Public Works
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- AI SUMMARY -->
+
+            <div class="result-summary">
+
+                <span>
+                    AI Summary
+                </span>
+
+                <p id="resultSummary">
+
+                    The reported issue appears to be
+                    a civic infrastructure problem that
+                    may require attention from the
+                    public works department.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <button
+                type="button"
+                class="secondary-button"
+                onclick="submitReport()"
+            >
+
+                Submit Civic Report →
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================================
+         BOTTOM NAVIGATION
+    ================================= -->
+
+    <nav class="bottom-nav">
+
+
+        <a href="../index.html">
+
+            <span>⌂</span>
+
+            <small>
+                Home
+            </small>
+
+        </a>
+
+
+        <a
+            href="report.html"
+            class="active"
+        >
+
+            <span>＋</span>
+
+            <small>
+                Report
+            </small>
+
+        </a>
+
+
+        <a href="issues.html">
+
+            <span>◉</span>
+
+            <small>
+                Issues
+            </small>
+
+        </a>
+
+
+        <a href="dashboard.html">
+
+            <span>▦</span>
+
+            <small>
+                Dashboard
+            </small>
+
+        </a>
+
+
+    </nav>
+
+
+
+    <!-- ================================
+         JAVASCRIPT
+    ================================= -->
+
+    <script src="../script.js"></script>
+
+    <script src="../js/report.js"></script>
+
+
+</body>
+
+</html>
